@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../pxfuel.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  font-family: sans-serif;
+  color: rgb(209, 170, 15);
+  overflow: auto;
+}
+a {
+  color: white;
+  font-size: 14px;
+}
+#main {
+  width: 100%;
+}
+#wrap {
+  position: relative;
+  margin: 0 auto;
+  width: 1100px;
+  height: 680px;
+  margin-top: 10px;
+}
+#text {
+  width: 272px;
+  height: 560px;
+  left: 188px;
+  top: 80px;
+  position: absolute;
+}
+#code {
+  display: none;
+  color: rgb(196, 255, 255);
+  font-size: 16px;
+  margin-top: 70px;
+  line-height: 25px;
+  font-size: larger;
+  font-weight: bolder;
+}
+#clock-box {
+  position: absolute;
+  left: 10px;
+  top: 50px;
+  font-size: 24px;
+  color: #fff;
+  background: rgba(255, 105, 180, 0.3); /* slightly brighter background */
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-family: 'Courier New', monospace;
+  animation: pulse 1.5s infinite;
+  box-shadow: 
+    0 0 15px #ff69b4,
+    0 0 25px #ff1493,
+    0 0 35px #ff1493,
+    0 0 45px #ff1493;
+  text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #ff69b4,
+    0 0 15px #ff1493;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 
+      0 0 10px #ff69b4,
+      0 0 20px #ff1493,
+      0 0 30px #ff1493;
+  }
+  50% {
+    box-shadow: 
+      0 0 25px #ff69b4,
+      0 0 35px #ff1493,
+      0 0 45px #ff69b4;
+  }
+  100% {
+    box-shadow: 
+      0 0 10px #ff69b4,
+      0 0 20px #ff1493,
+      0 0 30px #ff1493;
+  }
+}
+
+
+#clock .digit {
+  font-size: 64px;
+}
+#canvas {
+  margin: 0 auto;
+  width: 1100px;
+  height: 680px;
+}
+#error {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 60px;
+  display: none;
+}
+.hand {
+  cursor: pointer;
+}
+.say {
+  margin-left: 5px;
+}
+.space {
+  margin-right: 150px;
+}
+.hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99;
+}
+
+.heart {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -10px;
+  animation: floatHearts 6s ease-in infinite;
+  transform: rotate(45deg);
+  box-shadow: 0 0 15px red;
+}
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+}
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+@keyframes floatHearts {
+  0% {
+    transform: translateY(0) scale(1) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-700px) scale(1.5) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+#message-box{
+  position: absolute;
+  margin-top:450px;
+  font-size: 25px;
+  font-family: monospace;
+
+}
